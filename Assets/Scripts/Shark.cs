@@ -54,5 +54,11 @@ public class Shark : MonoBehaviour
         eatingGameObject = gameObjectToDestroy;
     }
 
-
+    private void OnDestroy()
+    {
+        if (IsEatingPlayer)
+        {
+            GameController.instance.GameOver();
+        }
+    }
 }
