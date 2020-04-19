@@ -52,6 +52,7 @@ MonoBehaviour:
   ExplosionAnimator: {fileID: 1280633845351618295}
   sharkAudioSource: {fileID: -5506812332349928788}
   nomnomAudio: {fileID: 8300000, guid: af6121b942e3ae3459cdf1291f710e18, type: 3}
+  explosionAudio: {fileID: 0}
 --- !u!61 &7806588365427845491
 BoxCollider2D:
   m_ObjectHideFlags: 0

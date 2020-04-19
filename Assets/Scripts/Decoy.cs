@@ -23,6 +23,7 @@ public class Decoy : MonoBehaviour
     IEnumerator StartCountDown()
     {
         countStarted = true;
+        AudioManager.instance.PlayExplosionAudio(2);
         yield return new WaitForSeconds(2);
         PlayExplosionAnimation();
     }

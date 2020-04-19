@@ -11,10 +11,12 @@ public class Shark : MonoBehaviour
     private GameObject eatingGameObject = null;
     public AudioSource sharkAudioSource;
     public AudioClip nomnomAudio;
+    public AudioClip explosionAudio;
 
     public void TargetSharkForBombing()
     {
         ExplosionAnimator.Play("seek_and_destroy_explosion");
+        AudioManager.instance.PlayExplosionAudio(3);
     }
 
     public void DisableShark()
@@ -51,4 +53,6 @@ public class Shark : MonoBehaviour
         IsEatingPlayer = isPlayer;
         eatingGameObject = gameObjectToDestroy;
     }
+
+
 }

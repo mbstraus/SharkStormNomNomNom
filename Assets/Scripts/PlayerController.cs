@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject StunnedAnimation;
-
     public RuntimeAnimatorController NormalSwimAnimation;
     public RuntimeAnimatorController ScaredSwimAnimation;
     public float MovementSpeed;
@@ -17,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public GameObject DecoyPrefab;
     public GameObject SpacebarIndicator;
     private Animator animator;
+
+    public AudioSource playerAudioSource;
+    public AudioClip owClip;
+    public AudioClip thankyouClip;
 
     private void Awake()
     {
@@ -107,11 +110,13 @@ public class PlayerController : MonoBehaviour
         {
             if (hitObstacle is Bystander)
             {
+                playerAudioSource.PlayOneShot(thankyouClip, 3);
                 Bystander bystander = (Bystander)hitObstacle;
                 bystander.Rescue();
             }
             else
             {
+                playerAudioSource.PlayOneShot(owClip, 3);
                 MovementDisabled = true;
                 MovementTimeout = MovementTimeoutStartingValue;
                 StunnedAnimation.SetActive(true);

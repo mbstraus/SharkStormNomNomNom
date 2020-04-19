@@ -132,6 +132,7 @@ MonoBehaviour:
   ExplosionAnimator: {fileID: 9032948397201173251}
   sharkAudioSource: {fileID: 3685017075129967126}
   nomnomAudio: {fileID: 8300000, guid: af6121b942e3ae3459cdf1291f710e18, type: 3}
+  explosionAudio: {fileID: 0}
 --- !u!61 &1930762713131816667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -210,7 +211,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.418
   m_Pitch: 1
   Loop: 0
   Mute: 0
